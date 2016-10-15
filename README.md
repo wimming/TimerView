@@ -1,2 +1,2 @@
 # TimerView
-a timer which ectends an View
+a timer which extends an View
