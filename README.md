@@ -1,6 +1,8 @@
 # TimerView
 A timer which extends a View, you can use it to start a countdown if you need.
 
+[![](https://jitpack.io/v/wimming/TimerView.svg)](https://jitpack.io/#wimming/TimerView)
+
 ## Screen Shoot
 ![image](https://github.com/wimming/TimerView/blob/master/device-2016-10-15-152127.png)
 
