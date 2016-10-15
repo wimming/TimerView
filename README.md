@@ -216,7 +216,7 @@ The method storeState() reStoreState() will keep the necessary data into SharedP
     
         ...
         // 5 minutes
-        timerView.startCountDown(300000);、
+        timerView.startCountDown(300000);
         
         timerView.restoreState();
 
