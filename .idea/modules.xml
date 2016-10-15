@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LittleShape.iml" filepath="$PROJECT_DIR$/LittleShape.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timerview/timerview.iml" filepath="$PROJECT_DIR$/timerview/timerview.iml" />
     </modules>
   </component>
 </project>

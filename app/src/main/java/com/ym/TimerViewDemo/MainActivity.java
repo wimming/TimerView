@@ -8,6 +8,8 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Toast;
 
+import com.ym.timerview.TimerView;
+
 public class MainActivity extends Activity {
 
     private TimerView timerView;

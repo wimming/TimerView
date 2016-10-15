@@ -1,4 +1,4 @@
-package com.ym.TimerViewDemo;
+package com.ym.timerview;
 
 import android.content.Context;
 import android.content.SharedPreferences;
