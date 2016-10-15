@@ -1,9 +1,11 @@
 # TimerView
-A timer which extends a View
+A timer which extends a View, you can use it to start a countdown if you need.
+
 ## Screen Shoot
 ![image](https://github.com/wimming/TimerView/blob/master/device-2016-10-15-152127.png)
+
 ## Usage
-Copy the TimerView.java into your project. Then derectly use TimerView element in xml like this:
+Copy the TimerView.java into your project. Then directly use TimerView element in xml like this:
 ```
     <com.ym.littleshape.TimerView
         android:layout_width="match_parent"
@@ -18,6 +20,7 @@ And in Java:
         timerView = (TimerView)findViewById(R.id.timer_view);
 ```
 And then there will be a basic TimerView in your Activity: a circle and a point in the center.
+
 Now you can use
 ```
 timerView.startCountDown(long millis);
@@ -31,6 +34,7 @@ setOnEndCountDownListener(OnEndCountDownListener listener)
 ```
 to set the listener and implement your callback.
 
+## Methods
 You can use several methods in timerView to customize your TimerView
 
 - startCountDown(long millis)
@@ -64,7 +68,9 @@ You can use several methods in timerView to customize your TimerView
 
 ## Example
 Here are some typical usage example:
+
 ### Ball affected by gravity
+The little point in the center of the circle can move under the affect of gravity
 ```
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,7 +215,7 @@ The method storeState() reStoreState() will keep the necessary data into SharedP
     protected void onCreate(Bundle savedInstanceState) {
     
         ...
-        // 30s
+        // 5 minutes
         timerView.startCountDown(300000);、
         
         timerView.restoreState();
