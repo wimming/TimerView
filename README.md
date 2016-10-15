@@ -196,7 +196,7 @@ In this case, keep touch the ball and then you will come into setting mode, slid
         timerView.setOnStartInteractiveSettingListener(new TimerView.OnStartInteractiveSettingListener() {
             @Override
             public void onStartInteractiveSetting(View v) {
-                Toast.makeText(MainActivity.this, "onStartManuallySetting", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "onStartInteractiveSetting", Toast.LENGTH_SHORT).show();
 
                 Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
                 long [] pattern = {0, 100};
@@ -206,7 +206,7 @@ In this case, keep touch the ball and then you will come into setting mode, slid
         timerView.setOnConfirmInteractiveSettingListener(new TimerView.OnConfirmInteractiveSettingListener() {
             @Override
             public void onConfirmInteractiveSetting(View v) {
-                Toast.makeText(MainActivity.this, "onConfirmManuallySetting", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "onConfirmInteractiveSetting", Toast.LENGTH_SHORT).show();
 
                 Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
                 long [] pattern = {0, 100};
