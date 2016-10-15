@@ -24,6 +24,7 @@ timerView.startCountDown(long millis);
 timerView.cancelCountDown();
 ```
 to start a timer for countdown or interruput it.
+
 The end of the countdown can be listened: use
 ```
 setOnEndCountDownListener(OnEndCountDownListener listener)
@@ -61,13 +62,7 @@ You can use several methods in timerView to customize your TimerView
 
 - isSettingState()
 
-If you use
-```
-timerView.setGravityEnable(true);
-```
-The ball in center will affect by gravity use the gravity sensor.
-If you use
-
+## Example
 Here are some typical usage example:
 ### Ball affected by gravity
 ```
@@ -167,6 +162,9 @@ In this case, keep touch the ball and then you will come into setting mode, slid
         ...
         timerView.setDefaultStartSettingEnable(true);
         
+        // the default way to start settint need to touch the ball
+        timerView.setBallClickEnable(true);
+        
         // then you can set these listeners for callback, such as a vibrating.
         timerView.setOnStartInteractiveSettingListener(new TimerView.OnStartInteractiveSettingListener() {
             @Override
@@ -191,5 +189,40 @@ In this case, keep touch the ball and then you will come into setting mode, slid
         timerView.setOnCancelInteractiveSettingListener(null);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        // here is a example to cancel setting
+        if (timerView.isSettingState()) {
+            timerView.cancelInteractiveSetting();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+```
+### Keep your countdown state
+If you want to continue your countdown after restart the app, here is the example.
+The method storeState() reStoreState() will keep the necessary data into SharedPrefernce.
+```
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    
+        ...
+        // 30s
+        timerView.startCountDown(300000);、
+        
+        timerView.restoreState();
+
+    }
+
+    @Override
+    protected void onPause() {
+    
+        timerView.storeState();
+
+        super.onPause();
+    }
+
 
 ```
