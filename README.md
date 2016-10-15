@@ -91,7 +91,7 @@ The little point in the center of the circle can move under the affect of gravit
     }
 ```
 ### Ball affected by shaking
-shake your phone, the ball bounce. Haha, a little funny?
+Shake your phone, the ball bounce. Haha, a little funny?
 ```
     @Override
     protected void onCreate(Bundle savedInstanceState) {
